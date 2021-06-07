@@ -7,6 +7,7 @@ console.log(random_number);
 var rover_width = 100;
 var rover_height = 90;
 var background_image = NASA_mars_images[random_number];
+console.log("background image - " + background_image);
 var rover_image = "rover.png"
 
 rover_x = 10;
@@ -32,15 +33,19 @@ function my_keydown(e){
     key_press=e.keyCode;
     if (key_press == '40'){
         down();
+        console.log("down");
     }
     if (key_press == '38'){
         up();
+        console.log("up");
     }
     if (key_press == '37'){
         left();
+        console.log("left");
     }
     if (key_press == '39'){
         right();
+        console.log("right");
     }
 }
 function down(){
@@ -48,6 +53,7 @@ function down(){
         rover_y = rover_y+10;
         upload_background();
         upload_rover();
+        console.log("When down arrow is pressed, x = " +rover_x + "y = "+rover_y);
     }
 }
 function up(){
@@ -55,6 +61,7 @@ function up(){
         rover_y = rover_y-10;
         upload_background();
         upload_rover();
+        console.log("When up arrow is pressed, x = " +rover_x + "y = "+rover_y);
     }
 }
 function right(){
@@ -62,6 +69,7 @@ function right(){
         rover_x = rover_x+10;
         upload_background();
         upload_rover();
+        console.log("When right arrow is pressed, x = " +rover_x + "y = "+rover_y);
     }
 }
 function left(){
@@ -69,5 +77,6 @@ function left(){
         rover_x = rover_x-10;
         upload_background();
         upload_rover();
+        console.log("When left arrow is pressed, x = " +rover_x + "y = "+rover_y);
     }
 }
